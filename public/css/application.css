@@ -1,9 +1,240 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #2929292;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+  padding: 8px 0;
+  line-height: 1.4em;
+  font-family: Times;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: #292929;
+
+  -webkit-box-shadow: 0 0 6px 0 #292929;
+  -moz-box-shadow: 0 0 6px 0 #292929;
+  box-shadow: 0 0 6px -0 #292929;
+}
+
+.round_corners {
+  border-radius: 8px;
+}
+
+#blog_title {
+  height: 100%;
+  line-height: 60px;
+}
+
+#header_container {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  color: white;
+}
+
+#header_container a, a:visited {
+  color: #999999;
+  text-decoration: none;
+}
+
+#header_container a:hover {
+  color: white;
+}
+
+#header_container h3 a, h3 a:visited, h3 a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.sessions {
+  height: 100%;
+  line-height: 60px;
+  margin-left: 24px;
+}
+
 .container {
-  margin: 20px auto;
+  margin: 96px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
 }
-th {
-  text-align: left;
+
+.post_holder {
+  margin-top: 48px;
+}
+
+.post_holder:first-child {
+  margin-top: 0;
+}
+
+.post_holder h3 {
+  color: #292929;
+}
+
+.post_holder h3 a, a:visited a:hover {
+  color: #292929;
+  text-decoration: none;
+}
+
+.post_holder h3 a:hover {
+  color: #0088cc;
+}
+
+div.tags_holder {
+  text-align: center;
+}
+
+div.tags_holder ul {
+  margin: 0;
+  padding: 16px 0;
+}
+
+.tags_holder ul li {
+  text-decoration: none;
+  display: inline;
+  padding: 0 16px 0 16px;
+  color: #999999;
+}
+
+.tags_holder ul li a, a:visited, a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+
+.tags_holder ul li a:hover {
+  color: #0088cc;
+}
+
+#post_navigation {
+  margin-top: 32px;
+  color: #999999;
+}
+
+#post_navigation a, a:visited a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+
+#post_navigation a:hover {
+  color: #0088cc;
+}
+
+#form_holder {
+  margin-top: 32px;
+}
+
+label {
+  width: 40px;
+  padding-right: 16px;
+  color: #292929;
+}
+
+input {
+  width: 320px;
+  height: 24px;
+  border: 1px solid #cccccc;
+  padding: 0 0 0 8px;
+  margin: 0;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid #0088cc;
+}
+
+textarea {
+  width: 318px;
+  resize: none;
+  overflow: auto;
+  border: 1px solid #cccccc;
+  padding: 4px 0 0 8px;
+  margin: 0;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1px solid #0088cc;
+}
+
+#submit_button {
+  margin: 24px 0 0 56px;
+  padding: 0;
+  height: 32px;
+  color: white;
+  background-color: #292929;
+  outline: none;
+}
+
+#submit_button:hover {
+  background-color: #0088cc;
+}
+
+#edit_delete {
+  with: 600px;
+  text-align: center;
+  margin-top: 0;
+}
+
+#edit_delete ul {
+  margin: 0;
+  padding: 16px 0;
+  list-style-type: none;
+}
+
+#edit_delete ul li {
+  text-decoration: none;
+  /*display: inline;*/
+  padding: 0 16px 0 0;
+  color: #999999;
+}
+
+#edit_delete ul li a, a:visited, a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+
+#edit_delete ul li a:hover {
+  color: #0088cc;
+}
+
+div.errors ul {
+  font-family: Times;
+  font-size: 16px;
+  margin: 0;
+  padding-left: 16px;
+}
+
+div.errors ul li {
+  color: #c8255d;
+}
+
+footer {
+  text-align: center;
+  width: 600px;
+  margin: 16px auto 24px auto;
 }

@@ -1,0 +1,39 @@
+<div class="container">
+  
+  <h3>Write Your Blog Post</h3>
+
+  <% if @post.errors.any? %>
+    <div class="errors">
+      <p>Sorry, there were some problems saving this post:
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div id="form_holder">
+    <form action="/create_post" method="post">
+      
+          <label for="title">Title:</label>
+          <input class="round_corners" id="title" type="text" name="title"
+          value="<%= @post.title if @post.title %>">
+          
+          <br><br>
+
+          <label for="body">Body:</label>
+          <textarea class="round_corners" id="body" name="body" rows=10><%= @post.body if @post.body %></textarea>
+
+          <br><br>
+
+          <label for="tag_names">Tags:</label>
+          <input class="round_corners" id="tag_names" type="text" name="tag_names" value="<%= @post.tags_joined if @post.tags %>">
+
+          <br><br>
+          
+          <input class="round_corners" id="submit_button" type="submit">
+    </form>
+  </div>
+  <br>
+</div>

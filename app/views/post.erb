@@ -1,0 +1,46 @@
+<div class="container">
+  
+  <!-- display the post -->
+    <div class="post_holder"> 
+      <h3>
+          <%= @post.title %>
+      </h3>
+      <p><%= @post.body %></p>
+      <div class="tags_holder">
+        <ul>
+          <% @post.tags.each do |tag| %>
+            <li>
+              <a href="/tag/<%= tag.id %>"><%= tag.name %></a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div id="edit_delete">
+      <ul>
+        <li>
+          <a href="/edit_post/<%= @post.id %>">edit this post</a>
+        </li>
+        
+        <li>
+          <a href="/delete_post/<%= @post.id %>">delete this post</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="post_navigation">
+      <% if @post != Post.first %>
+        <div class="previous float_left">
+          <a href="/post/<%= @post.id - 1 %>"><< Previous</a>
+        </div>
+      <% end %>
+
+      <% if @post != Post.last %>
+        <div class="next float_right">
+          <a href="/post/<%= @post.id + 1 %>">Next >></a>
+        </div>
+      <% end %>
+    </div>
+
+</div>

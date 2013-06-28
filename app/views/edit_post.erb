@@ -1,0 +1,46 @@
+<div class="container">
+  
+  <h3>Edit Your Blog Post</h3>
+  
+  <% if @post.errors.any? %>
+    <div class="errors">
+      <p>Sorry, there were some problems updating this post:
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div id="form_holder">
+    <form action="/edit_post/<%= @post.id %>" method="post">
+      
+          <label for="title">Title:</label>
+          <input class="round_corners" 
+                 id="title" 
+                 type="text" 
+                 name="title"
+                 value="<%= @post.title %>">
+          
+          <br><br>
+
+          <label for="body">Body:</label>
+          <textarea class="round_corners" id="body" name="body" rows=10><%= @post.body.strip %></textarea>
+
+          <br><br>
+
+          <label for="tag_names">Tags:</label>
+          <input class="round_corners" 
+                 id="tag_names" 
+                 type="text" 
+                 name="tag_names"
+                 value="<%= @post.tags_joined %>">
+
+          <br><br>
+          
+          <input class="round_corners" id="submit_button" type="submit" value="save changes">
+    </form>
+  </div>
+  <br>
+</div>

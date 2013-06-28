@@ -1,7 +1,10 @@
 <div class="container">
   
+  <h3><%= @tag.name %></h3>
+  <p>These are the posts tagged "<%= @tag.name %>"</p>
+
   <!-- display all of the posts -->
-  <% Post.order(:created_at).reverse_order.each do |post| %>
+  <% @tag.posts.order(:created_at).reverse_order.each do |post| %>
     <div class="post_holder"> 
       <h3>
         <a href="/post/<%= post.id %>">

@@ -18,6 +18,28 @@
   <title></title>
 </head>
 <body>
+
+  <header>
+    <div id="header_container">
+      <div id="blog_title" class="float_left">
+        <h3><a href="/">Lorem Blog</a></h3>
+      </div>
+      
+      <div class="float_right sessions"><a href="/">Logout</a></div>
+      <div class="float_right sessions"><a href="/">Login</a></div>
+      <div class="float_right sessions"><a href="/">Register</a></div>
+      <div class="float_right sessions">
+        <a href="/create_post">Create Post</a>
+      </div>
+    </div>
+  </header>
+
   <%= yield %>
+
+
+  <footer>
+    This is my blog's footer.
+  </footer>
+  
 </body>
 </html>

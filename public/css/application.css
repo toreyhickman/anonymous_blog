@@ -149,6 +149,7 @@ div.tags_holder ul {
 }
 
 label {
+  display: inline-block;
   width: 40px;
   padding-right: 16px;
   color: #292929;
@@ -168,7 +169,7 @@ input:focus {
 }
 
 textarea {
-  width: 318px;
+  width: 320px;
   resize: none;
   overflow: auto;
   border: 1px solid #cccccc;
@@ -182,16 +183,20 @@ textarea:focus {
 }
 
 #submit_button {
-  margin: 24px 0 0 56px;
+  margin: 24px 0 0 60px;
   padding: 0;
   height: 32px;
   color: white;
   background-color: #292929;
   outline: none;
+  width: 330px;
 }
 
 #submit_button:hover {
+  transition: background-color 2s linear;
+  -webkit-transition: background-color 2s linear;
   background-color: #0088cc;
+  font-size: large;
 }
 
 #edit_delete {
